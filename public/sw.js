@@ -1,6 +1,6 @@
 // SafeOps360 service worker — shell cache + offline fallback.
 // Network-first for HTML to avoid stale HTML / hydration mismatch after deploys.
-const STATIC_CACHE = "safeops360-shell-v3";
+const STATIC_CACHE = "safeops360-shell-v4";
 const SHELL_URLS = ["/manifest.webmanifest", "/icon-192.svg", "/icon-512.svg"];
 
 self.addEventListener("install", (event) => {
