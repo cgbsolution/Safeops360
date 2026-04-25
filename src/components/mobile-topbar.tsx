@@ -1,5 +1,6 @@
 "use client";
 
+import type { Route } from "next";
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
@@ -17,7 +18,7 @@ export function MobileTopbar({ title, subtitle, right, backHref }: MobileTopbarP
       <div className="mx-auto flex h-14 max-w-md items-center gap-3 px-4">
         <button
           type="button"
-          onClick={() => (backHref ? router.push(backHref) : router.back())}
+          onClick={() => (backHref ? router.push(backHref as Route) : router.back())}
           className="grid h-9 w-9 place-items-center rounded-lg border bg-card transition-colors hover:bg-accent"
           aria-label="Back"
         >
